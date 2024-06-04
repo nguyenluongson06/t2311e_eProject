@@ -52,9 +52,9 @@ function get_manufacturers()
     return $manufacturer_list;
 }
 
-function card_detail($id)
+function get_card_detail($card_id)
 {
-    $sql = "select * from cards where id = $id";
+    $sql = "select * from cards where id = $card_id";
     $result = query($sql);
     if ($result->num_rows > 0) {
         return $result->fetch_assoc();
@@ -62,9 +62,9 @@ function card_detail($id)
     return null;
 }
 
-function category_detail($id)
+function get_category_detail($category_id)
 {
-    $sql = "select * from categories where id = $id";
+    $sql = "select * from categories where id = $category_id";
     $result = query($sql);
     if ($result->num_rows > 0) {
         return $result->fetch_assoc();
@@ -72,12 +72,47 @@ function category_detail($id)
     return null;
 }
 
-function manufacturer_detail($id)
+function get_manufacturer_detail($manufacturer_id)
 {
-    $sql = "select * from manufacturers where id = $id";
+    $sql = "select * from manufacturers where id = $manufacturer_id";
     $result = query($sql);
     if ($result->num_rows > 0) {
         return $result->fetch_assoc();
     }
     return null;
+}
+
+function get_card_in_category($category_id)
+{
+    $sql = "select * from cards where category_id = $category_id";
+    $result = query($sql);
+    $card_list = [];
+    while ($row = $result->fetch_assoc()) {
+        $card_list[] = $row;
+    }
+    return $card_list;
+}
+
+function get_card_in_manufacturer($manufacturer_id)
+{
+    $sql = "select * from cards where manufacturer_id = $manufacturer_id";
+    $result = query($sql);
+    $card_list = [];
+    while ($row = $result->fetch_assoc()) {
+        $card_list[] = $row;
+    }
+    return $card_list;
+}
+
+function get_related_cards($card_id)
+{
+    $card_info = get_card_detail($card_id);
+    $category_id = $card_info["category_id"];
+    $sql = "select * from cards where category_id = $category_id";
+    $result = query($sql);
+    $card_list = [];
+    while ($row = $result->fetch_assoc()) {
+        $card_list[] = $row;
+    }
+    return $card_list;
 }
