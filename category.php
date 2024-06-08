@@ -1,6 +1,6 @@
 <?php
 require_once ("database/db.php");
-$manufacturer_id = $_GET("id");
+$manufacturer_id = $_GET["id"];
 $manufacturer_detail = get_category_detail($manufacturer_id);
 $cards = get_card_in_category($manufacturer_id);
 ?>
@@ -18,29 +18,56 @@ $cards = get_card_in_category($manufacturer_id);
         <header>
         </header>
         <?php include_once ("components/nav.php"); ?>
-        <main class="main">
+        <section class="inner_page_head">
+            <div class="container_fuild">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="full">
+                            <h3><?php echo $manufacturer_detail["name"] ?></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="product_section layout_padding">
             <div class="container">
-                <h1>Showing cards in <?php echo $manufacturer_detail["name"] ?> category</h1>
+                <div class="heading_container heading_center">
+                    <h2>
+                        Card <span>list</span>
+                    </h2>
+                </div>
                 <div class="row">
                     <?php foreach ($cards as $item): ?>
-                        <div class="col-3">
-                            <div class="card" style="width: 18rem;">
-                                <a href="/card-detail.php?id=<?php echo $item["id"]; ?>">
-                                    <img src="<?php echo $item["thumbnail_url"] ?>" class="card-img-top" alt="...">
-                                </a>
-                                <div class="card-body">
-                                    <h5 class="card-title"><?php echo $item["name"] ?></h5>
-                                    <p class="card-text"><?php echo $item["short_desc"] ?></p>
-                                    <p class="text-danger"><?php echo $item["price"] ?></p>
-                                    <a href="/card-detail.php?id=<?php echo $item["id"]; ?>" class="btn btn-primary">More
-                                        info</a>
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <div class="box">
+                                <div class="option_container">
+                                    <div class="options">
+                                        <a href="/card-detail.php?id=<?php echo $item["id"]; ?>" class="option1">
+                                            More Info
+                                        </a>
+                                        <a href="" class="option2">
+                                            Buy Now
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="img-box">
+                                    <img src="<?php echo $item["thumbnail_url"] ?>" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h5>
+                                        <?php echo $item["name"] ?>
+                                    </h5>
+                                    <h6>
+                                        $<?php echo $item["price"] ?>
+                                    </h6>
                                 </div>
                             </div>
                         </div>
-                    <?php endforeach; ?>
+                    <?php endforeach ?>
                 </div>
             </div>
-        </main>
+        </section>
+        <?php include_once ("components/footer.php"); ?>
     </body>
 
 </html>

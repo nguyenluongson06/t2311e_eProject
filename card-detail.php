@@ -54,6 +54,7 @@ $related_cards = get_related_cards($card_id);
                 </div>
             </div>
         </main>
+        <?php include_once ("components/footer.php"); ?>
     </body>
 
 </html>
