@@ -52,7 +52,7 @@ $manufacturers = get_manufacturers();
                         <a class="nav-link" href="/contact-us.php">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/cart.php">
+                        <a class="nav-link" href="#">
                             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029"
                                 style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
@@ -77,12 +77,39 @@ $manufacturers = get_manufacturers();
                                             d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
                                           c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
                                     </g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
                             </svg>
-                            <span
-                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger text-light">
-                                <?php echo isset($_SESSION["cart"]) ? count($_SESSION["cart"]) : 0; ?></span></a>
                         </a>
-
                     </li>
                     <form class="form-inline">
                         <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
