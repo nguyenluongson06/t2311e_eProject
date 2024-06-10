@@ -1,4 +1,5 @@
 <?php
+session_start();
 //global connect func
 function connect()
 {
@@ -108,11 +109,31 @@ function get_related_cards($card_id)
 {
     $card_info = get_card_detail($card_id);
     $category_id = $card_info["category_id"];
-    $sql = "select * from cards where category_id = $category_id";
+    $sql = "select * from cards where category_id = $category_id limit 6";
     $result = query($sql);
     $card_list = [];
     while ($row = $result->fetch_assoc()) {
         $card_list[] = $row;
     }
     return $card_list;
+}
+
+function get_cart()
+{
+    $cart = isset($_SESSION["cart"]) ? $_SESSION["cart"] : [];
+    if (count($cart) > 0) {
+        $card_ids = [];
+        foreach ($cart as $id => $qty) {
+            $card_ids[] = $id;
+        }
+        $cart_ids = implode(",", $card_ids);
+        $sql = "select * from cards where id in ($cart_ids)";
+        $result = query($sql);
+        $list = [];
+        while ($row = $result->fetch_assoc()) {
+            $list[] = $row;
+        }
+        return $list;
+    }
+    return [];
 }
