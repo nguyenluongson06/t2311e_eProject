@@ -11,10 +11,6 @@ body {
   overflow-x: hidden;
 }
 
-footer{
-  color: black;
-}
-
 .layout_padding {
   padding: 70px 0;
 }
@@ -1009,7 +1005,6 @@ footer {
   text-transform: uppercase;
   letter-spacing: 0.2px;
   margin-bottom: 25px;
-  color: black;
 }
 
 .widget_menu ul {

@@ -1,10 +1,11 @@
 <?php
+session_start();
 //global connect func
 function connect()
 {
     $host = "127.0.0.1";
     $user = "root";
-    $pwd = "";
+    $pwd = "root";
     $db = "card_shop";
     $conn = new mysqli($host, $user, $pwd, $db);
     if ($conn->connect_error)
@@ -115,4 +116,24 @@ function get_related_cards($card_id)
         $card_list[] = $row;
     }
     return $card_list;
+}
+
+function get_cart()
+{
+    $cart = isset($_SESSION["cart"]) ? $_SESSION["cart"] : [];
+    if (count($cart) > 0) {
+        $card_ids = [];
+        foreach ($cart as $id => $qty) {
+            $card_ids[] = $id;
+        }
+        $cart_ids = implode(",", $card_ids);
+        $sql = "select * from cards where id in ($cart_ids)";
+        $result = query($sql);
+        $list = [];
+        while ($row = $result->fetch_assoc()) {
+            $list[] = $row;
+        }
+        return $list;
+    }
+    return [];
 }

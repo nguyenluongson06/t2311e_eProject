@@ -13,11 +13,13 @@ $cards = get_cards();
     </head>
 
     <body>
+        <!-- header + slider -->
         <div class="hero_area">
             <?php include_once ("components/nav.php"); ?>
             <?php include_once ("components/slider.php"); ?>
         </div>
-
+        <!-- end header + slider -->
+        <!-- main content -->
         <main class="main">
             <div class="container">
                 <section class="product_section layout_padding">
@@ -35,9 +37,6 @@ $cards = get_cards();
                                         <div class="options">
                                             <a href="/card-detail.php?id=<?php echo $item["id"]; ?>" class="option1">
                                                 More info
-                                            </a>
-                                            <a href="" class="option2">
-                                                Add to cart
                                             </a>
                                         </div>
                                     </div>
@@ -60,7 +59,10 @@ $cards = get_cards();
                 </section>
             </div>
         </main>
+        <!-- end main content -->
+        <!-- footer -->
         <?php include_once ("components/footer.php"); ?>
+        <!-- end footer -->
     </body>
 
 </html>
