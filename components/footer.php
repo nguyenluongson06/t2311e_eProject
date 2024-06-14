@@ -13,7 +13,8 @@ require_once ("components/style.php");
                     <div class="information_f">
                         <p><strong>ADDRESS:</strong> 8 Ton That Thuyet, Dich Vong, Cau Giay, Hanoi, Vietnam</p>
                         <p><strong>TELEPHONE:</strong> +84 234 567 890</p>
-                        <p><strong>EMAIL:</strong> card-treasure@gmail.com</p>
+                        <p><strong>EMAIL:</strong> <a href="mailto:card-treasure@gmail.com">card-treasure@gmail.com</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -36,11 +37,9 @@ require_once ("components/style.php");
                                     <h3>Account</h3>
                                     <ul>
                                         <li><a href="#">Account</a></li>
-                                        <li><a href="#">Checkout</a></li>
                                         <li><a href="#">Login</a></li>
                                         <li><a href="#">Register</a></li>
                                         <li><a href="#">Shopping</a></li>
-                                        <li><a href="#">Widget</a></li>
                                     </ul>
                                 </div>
                             </div>
