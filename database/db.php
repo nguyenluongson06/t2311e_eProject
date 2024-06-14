@@ -137,3 +137,36 @@ function get_cart()
     }
     return [];
 }
+
+function newest_cards()
+{
+    $sql = "select * from cards order by id desc limit 9";
+    $result = query($sql);
+    $list = [];
+    while ($row = $result->fetch_assoc()) {
+        $list[] = $row;
+    }
+    return $list;
+}
+
+function best_sellers()
+{
+    $sql = "select * from cards order by manufacturer_id desc limit 9";
+    $result = query($sql);
+    $list = [];
+    while ($row = $result->fetch_assoc()) {
+        $list[] = $row;
+    }
+    return $list;
+}
+
+function hot_items()
+{
+    $sql = "select * from cards order by category_id desc limit 9";
+    $result = query($sql);
+    $list = [];
+    while ($row = $result->fetch_assoc()) {
+        $list[] = $row;
+    }
+    return $list;
+}

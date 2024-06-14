@@ -172,6 +172,8 @@ a:focus {
   color: #f7444e;
 }
 
+
+
 .custom_nav-container .navbar-nav .nav-item:hover .nav-link svg,
 .custom_nav-container .navbar-nav .nav-item.active .nav-link svg {
   fill: #f7444e;
@@ -1130,4 +1132,17 @@ form input[type="submit"]:focus {
   color: #f7444e;
   font-size: 15px;
   font-weight: 400;
+}
+
+button.rounded-circle.active {
+  background-color: #f7444e !important;
+}
+
+button.rounded-circle.active>svg {
+  fill: white !important;
+}
+
+.arrival_section a:hover {
+  background-color: transparent !important;
+  color: #f7444e !important;
 }

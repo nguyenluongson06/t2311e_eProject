@@ -38,31 +38,28 @@ $cards = get_card_in_category($manufacturer_id);
                 </div>
                 <div class="row">
                     <?php foreach ($cards as $item): ?>
-                        <div class="col-sm-6 col-md-4 col-lg-3">
-                            <div class="box">
-                                <div class="option_container">
-                                    <div class="options">
-                                        <a href="/card-detail.php?id=<?php echo $item["id"]; ?>" class="option1">
-                                            More Info
-                                        </a>
-                                        <a href="" class="option2">
-                                            Buy Now
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="img-box">
-                                    <img src="<?php echo $item["thumbnail_url"] ?>" alt="">
-                                </div>
-                                <div class="detail-box">
-                                    <h5>
-                                        <?php echo $item["name"] ?>
-                                    </h5>
-                                    <h6>
-                                        $<?php echo $item["price"] ?>
-                                    </h6>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="box">
+                            <div class="option_container">
+                                <div class="options">
+                                    <a href="/card-detail.php?id=<?php echo $item["id"]; ?>" class="option1">
+                                        More Info
+                                    </a>
                                 </div>
                             </div>
+                            <div class="img-box">
+                                <img src="<?php echo $item["thumbnail_url"] ?>" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h5>
+                                    <?php echo $item["name"] ?>
+                                </h5>
+                                <h6>
+                                    $<?php echo $item["price"] ?>
+                                </h6>
+                            </div>
                         </div>
+                    </div>
                     <?php endforeach ?>
                 </div>
             </div>
