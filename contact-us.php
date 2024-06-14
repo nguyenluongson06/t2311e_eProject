@@ -115,7 +115,7 @@
                                                                         <h4 class="mb-3 text-dark">E-Mail</h4>
                                                                         <p class="mb-0">
                                                                             <a class="link-dark link-opacity-75 link-opacity-100-hover text-decoration-none"
-                                                                                href="card-treasure@gmail.com">card-treasure@gmail.com</a>
+                                                                                href="mailto:card-treasure@gmail.com">card-treasure@gmail.com</a>
                                                                         </p>
                                                                     </div>
                                                                 </div>
