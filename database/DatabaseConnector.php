@@ -5,7 +5,7 @@ class DatabaseConnector
 {
     private $host = "127.0.0.1";
     private $user = "root";
-    private $pwd = "root";
+    private $pwd = "";
     private $db = "card_shop";
     private function query($sql)
     {

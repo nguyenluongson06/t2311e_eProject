@@ -5,7 +5,7 @@ function connect()
 {
     $host = "127.0.0.1";
     $user = "root";
-    $pwd = "root";
+    $pwd = "";
     $db = "card_shop";
     $conn = new mysqli($host, $user, $pwd, $db);
     if ($conn->connect_error)
