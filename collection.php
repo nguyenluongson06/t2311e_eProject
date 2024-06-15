@@ -57,7 +57,7 @@ if ($current_category != 0) {
                             <div class="accordion" id="accordionPanelsStayOpenExample">
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button text-dark bg-light" type="button"
+                                        <button class="accordion-button text-black bg-light" type="button"
                                             data-mdb-target="#panelsStayOpen-collapseOne" aria-expanded="true"
                                             aria-controls="panelsStayOpen-collapseOne">
                                             Category
@@ -68,13 +68,13 @@ if ($current_category != 0) {
                                         <div class="accordion-body">
                                             <ul class="list-unstyled">
                                                 <?php foreach ($categories as $item): ?>
-                                                <li
-                                                    class="d-flex flex-row align-items-center nav-item <?php if ($item["id"] == $current_category): ?>active<?php endif ?>">
-                                                    <a href="/collection.php?category=<?php echo $item["id"] ?>"
-                                                        class="text-dark me-auto nav-filter <?php if ($item["id"] == $current_category): ?>active<?php endif ?>"><?php echo $item["name"] ?></a>
-                                                    <span
-                                                        class="badge badge-danger float-end"><?php echo get_count_category($item["id"])["count"] ?></span>
-                                                </li>
+                                                    <li class="d-flex flex-row align-items-center nav-item <?php if ($item["id"] == $current_category): ?>active<?php endif ?>"
+                                                        href="/collection.php?category=<?php echo $item["id"] ?>">
+                                                        <a href="/collection.php?category=<?php echo $item["id"] ?>"
+                                                            class="text-black me-auto nav-filter <?php if ($item["id"] == $current_category): ?>active<?php endif ?>"><?php echo $item["name"] ?></a>
+                                                        <span
+                                                            class="badge badge-danger float-end"><?php echo get_count_category($item["id"])["count"] ?></span>
+                                                    </li>
                                                 <?php endforeach ?>
                                             </ul>
                                         </div>
@@ -82,7 +82,7 @@ if ($current_category != 0) {
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button text-dark bg-light" type="button"
+                                        <button class="accordion-button text-black bg-light" type="button"
                                             data-mdb-target="#panelsStayOpen-collapseTwo" aria-expanded="true"
                                             aria-controls="panelsStayOpen-collapseTwo">
                                             Manufacturer
@@ -93,13 +93,13 @@ if ($current_category != 0) {
                                         <div class="accordion-body">
                                             <ul class="list-unstyled">
                                                 <?php foreach ($manufacturers as $item): ?>
-                                                <li
-                                                    class="d-flex flex-row align-items-center <?php if ($item["id"] == $current_manufacturer): ?>active<?php endif ?>">
-                                                    <a href="/collection.php?manufacturer=<?php echo $item["id"] ?>"
-                                                        class="text-dark me-auto nav-filter <?php if ($item["id"] == $current_manufacturer): ?>active<?php endif ?>"><?php echo $item["name"] ?></a>
-                                                    <span
-                                                        class="badge badge-danger float-end"><?php echo get_count_manufacturer($item["id"])["count"] ?></span>
-                                                </li>
+                                                    <li class="d-flex flex-row align-items-center <?php if ($item["id"] == $current_manufacturer): ?>active<?php endif ?>"
+                                                        href="/collection.php?manufacturer=<?php echo $item["id"] ?>">
+                                                        <a href="/collection.php?manufacturer=<?php echo $item["id"] ?>"
+                                                            class="text-black me-auto nav-filter <?php if ($item["id"] == $current_manufacturer): ?>active<?php endif ?>"><?php echo $item["name"] ?></a>
+                                                        <span
+                                                            class="badge badge-danger float-end"><?php echo get_count_manufacturer($item["id"])["count"] ?></span>
+                                                    </li>
                                                 <?php endforeach ?>
                                             </ul>
                                         </div>
@@ -116,57 +116,58 @@ if ($current_category != 0) {
                         </header>
 
                         <?php foreach ($cards as $item): ?>
-                        <div class="row justify-content-center mb-3">
-                            <div class="col-md-12">
-                                <div class="card shadow-0 border rounded-3">
-                                    <div class="card-body">
-                                        <div class="row g-0">
-                                            <div class="col-xl-3 col-md-4 d-flex justify-content-center">
-                                                <div
-                                                    class="bg-image hover-zoom ripple rounded ripple-surface me-md-3 mb-3 mb-md-0">
-                                                    <img src="<?php echo $item["thumbnail_url"] ?>" class="w-100">
-                                                    <a href="#!">
-                                                        <div class="hover-overlay">
-                                                            <div class="mask"
-                                                                style="background-color: rgba(253, 253, 253, 0.15);">
+                            <div class="row justify-content-center mb-3">
+                                <div class="col-md-12">
+                                    <div class="card shadow-0 border rounded-3">
+                                        <div class="card-body">
+                                            <div class="row g-0">
+                                                <div class="col-xl-3 col-md-4 d-flex justify-content-center">
+                                                    <div
+                                                        class="bg-image hover-zoom ripple rounded ripple-surface me-md-3 mb-3 mb-md-0">
+                                                        <img src="<?php echo $item["thumbnail_url"] ?>" class="w-100">
+                                                        <a href="/card-detail.php?id=<?php echo $item["id"] ?>">
+                                                            <div class="hover-overlay">
+                                                                <div class="mask"
+                                                                    style="background-color: rgba(253, 253, 253, 0.15);">
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-6 col-md-5 col-sm-7">
-                                                <h5><?php echo $item["name"] ?></h5>
-                                                <div class="d-flex flex-row">
-                                                    <div class="text-warning mb-1 me-2">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fas fa-star-half-alt"></i>
-                                                        <span class="ms-1">
-                                                            4.5
-                                                        </span>
-                                                    </div>
-                                                    <span class="text-muted">154 orders</span>
-                                                </div>
-
-                                                <p class="text mb-4 mb-md-0">
-                                                    <?php echo $item["short_desc"] ?>
-                                                </p>
-                                            </div>
-                                            <div class="col-xl-3 col-md-3 col-sm-5">
-                                                <div
-                                                    class="d-flex flex-row align-items-center justify-content-center mb-1">
-                                                    <h4 class="mb-1 me-1">$<?php echo $item["price"] ?></h4>
-                                                    <span
-                                                        class="text-danger"><s>$<?php echo $item["price"] * 1.2 ?></s></span>
-                                                </div>
-                                                <div class="mt-4">
-                                                    <div class="options">
-                                                        <a href="/card-detail.php?id=<?php echo $item["id"] ?>"
-                                                            class="option1">
-                                                            More info
                                                         </a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-6 col-md-5 col-sm-7">
+                                                    <h5><?php echo $item["name"] ?></h5>
+                                                    <div class="d-flex flex-row">
+                                                        <div class="text-warning mb-1 me-2">
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fa fa-star"></i>
+                                                            <i class="fas fa-star-half-alt"></i>
+                                                            <span class="ms-1">
+                                                                4.5
+                                                            </span>
+                                                        </div>
+                                                        <span class="text-muted">154 orders</span>
+                                                    </div>
+
+                                                    <p class="text mb-4 mb-md-0">
+                                                        <?php echo $item["short_desc"] ?>
+                                                    </p>
+                                                </div>
+                                                <div class="col-xl-3 col-md-3 col-sm-5">
+                                                    <div
+                                                        class="d-flex flex-row align-items-center justify-content-center mb-1">
+                                                        <h4 class="mb-1 me-1">$<?php echo $item["price"] ?></h4>
+                                                        <span
+                                                            class="text-danger"><s>$<?php echo $item["price"] * 1.2 ?></s></span>
+                                                    </div>
+                                                    <div class="mt-4">
+                                                        <div class="options">
+                                                            <a href="/card-detail.php?id=<?php echo $item["id"] ?>"
+                                                                class="option1">
+                                                                More info
+                                                            </a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -174,13 +175,24 @@ if ($current_category != 0) {
                                     </div>
                                 </div>
                             </div>
-                        </div>
                         <?php endforeach ?>
                     </div>
                 </div>
             </div>
         </section>
         <?php include_once ("components/footer.php"); ?>
+        <script>
+            document.querySelectorAll('li.align-items-center').forEach(
+                function (li) {
+                    li.addEventListener('click', function () {
+                        var a = li.querySelector('a');
+                        if (a) {
+                            window.location.href = a.href;
+                        }
+                    });
+                });
+        </script>
+
     </body>
 
 </html>

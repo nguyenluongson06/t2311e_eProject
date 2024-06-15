@@ -109,7 +109,7 @@ function get_related_cards($card_id)
 {
     $card_info = get_card_detail($card_id);
     $category_id = $card_info["category_id"];
-    $sql = "select * from cards where category_id = $category_id limit 6";
+    $sql = "select * from cards where category_id = $category_id limit 8";
     $result = query($sql);
     $card_list = [];
     while ($row = $result->fetch_assoc()) {

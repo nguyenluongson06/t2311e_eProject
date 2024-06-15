@@ -1154,11 +1154,11 @@ button.rounded-circle.active>svg {
 .accordion-body li {
   border-radius: 8px;
   padding: 4px 8px;
-  -webkit-transition: color 1s ease-in;
-  -moz-transition: color 1s ease-in;
-  -ms-transition: color 1s ease-in;
-  -o-transition: color 1s ease-in;
-  transition: color 1s ease-in;
+  -webkit-transition: color 1.5s ease-in-out;
+  -moz-transition: color 1.5s ease-in-out;
+  -ms-transition: color 1.5s ease-in-out;
+  -o-transition: color 1.5s ease-in-out;
+  transition: color 1.5s ease-in-out;
 }
 
 .accordion-body li:hover {
@@ -1167,4 +1167,16 @@ button.rounded-circle.active>svg {
 
 .accordion-body li.active {
   background-color: #f7444e !important;
+}
+
+a.nav-filter:not(.active):hover {
+  color: white !important;
+}
+
+.accordion-body li:hover>a {
+  color: white !important;
+}
+
+li.align-items-center {
+  cursor: pointer;
 }
