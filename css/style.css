@@ -1180,3 +1180,9 @@ a.nav-filter:not(.active):hover {
 li.align-items-center {
   cursor: pointer;
 }
+footer{
+  color: black;
+}
+footer h3{
+  color: black;
+}
