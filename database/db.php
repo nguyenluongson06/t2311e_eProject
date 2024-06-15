@@ -170,3 +170,21 @@ function hot_items()
     }
     return $list;
 }
+
+function get_count_category($category_id)
+{
+    $sql = "select count(category_id) as count from cards where category_id = $category_id";
+    $result = query($sql);
+    if ($result->num_rows > 0) {
+        return $result->fetch_assoc();// 1 product
+    }
+}
+
+function get_count_manufacturer($manufacturer_id)
+{
+    $sql = "select count(manufacturer_id) as count from cards where manufacturer_id = $manufacturer_id";
+    $result = query($sql);
+    if ($result->num_rows > 0) {
+        return $result->fetch_assoc();// 1 product
+    }
+}

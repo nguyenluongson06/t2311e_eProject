@@ -14,36 +14,11 @@ $manufacturers = get_manufacturers();
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Categories
-                        </a>
-                        <ul class="dropdown-menu">
-                            <?php foreach ($categories as $item): ?>
-                                <li>
-                                    <a href="/category.php?id=<?php echo $item["id"] ?>"
-                                        class="dropdown-item"><?php echo $item["name"] ?></a>
-                                </li>
-                            <?php endforeach ?>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Manufacturers
-                        </a>
-                        <ul class="dropdown-menu">
-                            <?php foreach ($manufacturers as $item): ?>
-                                <li>
-                                    <a href="/manufacturer.php?id=<?php echo $item["id"] ?>"
-                                        class="dropdown-item"><?php echo $item["name"] ?></a>
-                                </li>
-                            <?php endforeach ?>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/collection.php">Collection</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/about-us.php">About Us</a>

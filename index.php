@@ -76,29 +76,29 @@ $hot_items = hot_items();
                                     aria-labelledby="pills-newest-cards-tab" tabindex="0">
                                     <div class="row">
                                         <?php foreach ($newest_cards as $item): ?>
-                                            <div class="col-sm-6 col-md-4 col-lg-4">
-                                                <div class="box" style="height:99%">
-                                                    <div class="option_container">
-                                                        <div class="options">
-                                                            <a href="/card-detail.php?id=<?php echo $item["id"]; ?>"
-                                                                class="option1">
-                                                                More info
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="img-box">
-                                                        <img src="<?php echo $item["thumbnail_url"] ?>" alt="">
-                                                    </div>
-                                                    <div class="detail-box">
-                                                        <h5>
-                                                            <?php echo $item["name"] ?>
-                                                        </h5>
-                                                        <h6>
-                                                            $<?php echo $item["price"] ?>
-                                                        </h6>
+                                        <div class="col-sm-6 col-md-4 col-lg-4">
+                                            <div class="box" style="height:99%">
+                                                <div class="option_container">
+                                                    <div class="options">
+                                                        <a href="/card-detail.php?id=<?php echo $item["id"]; ?>"
+                                                            class="option1">
+                                                            More info
+                                                        </a>
                                                     </div>
                                                 </div>
+                                                <div class="img-box">
+                                                    <img src="<?php echo $item["thumbnail_url"] ?>" alt="">
+                                                </div>
+                                                <div class="detail-box">
+                                                    <h5>
+                                                        <?php echo $item["name"] ?>
+                                                    </h5>
+                                                    <h6>
+                                                        $<?php echo $item["price"] ?>
+                                                    </h6>
+                                                </div>
                                             </div>
+                                        </div>
                                         <?php endforeach ?>
                                     </div>
                                 </div>
@@ -106,29 +106,29 @@ $hot_items = hot_items();
                                     aria-labelledby="pills-best-sellers-tab" tabindex="0">
                                     <div class="row">
                                         <?php foreach ($best_sellers as $item): ?>
-                                            <div class="col-sm-6 col-md-4 col-lg-4">
-                                                <div class="box" style="height:99%">
-                                                    <div class="option_container">
-                                                        <div class="options">
-                                                            <a href="/card-detail.php?id=<?php echo $item["id"]; ?>"
-                                                                class="option1">
-                                                                More info
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="img-box">
-                                                        <img src="<?php echo $item["thumbnail_url"] ?>" alt="">
-                                                    </div>
-                                                    <div class="detail-box">
-                                                        <h5>
-                                                            <?php echo $item["name"] ?>
-                                                        </h5>
-                                                        <h6>
-                                                            $<?php echo $item["price"] ?>
-                                                        </h6>
+                                        <div class="col-sm-6 col-md-4 col-lg-4">
+                                            <div class="box" style="height:99%">
+                                                <div class="option_container">
+                                                    <div class="options">
+                                                        <a href="/card-detail.php?id=<?php echo $item["id"]; ?>"
+                                                            class="option1">
+                                                            More info
+                                                        </a>
                                                     </div>
                                                 </div>
+                                                <div class="img-box">
+                                                    <img src="<?php echo $item["thumbnail_url"] ?>" alt="">
+                                                </div>
+                                                <div class="detail-box">
+                                                    <h5>
+                                                        <?php echo $item["name"] ?>
+                                                    </h5>
+                                                    <h6>
+                                                        $<?php echo $item["price"] ?>
+                                                    </h6>
+                                                </div>
                                             </div>
+                                        </div>
                                         <?php endforeach ?>
                                     </div>
                                 </div>
@@ -136,29 +136,29 @@ $hot_items = hot_items();
                                     aria-labelledby="pills-hot-items-tab" tabindex="0">
                                     <div class="row">
                                         <?php foreach ($hot_items as $item): ?>
-                                            <div class="col-sm-6 col-md-4 col-lg-4">
-                                                <div class="box" style="height:99%">
-                                                    <div class="option_container">
-                                                        <div class="options">
-                                                            <a href="/card-detail.php?id=<?php echo $item["id"]; ?>"
-                                                                class="option1">
-                                                                More info
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="img-box">
-                                                        <img src="<?php echo $item["thumbnail_url"] ?>" alt="">
-                                                    </div>
-                                                    <div class="detail-box">
-                                                        <h5>
-                                                            <?php echo $item["name"] ?>
-                                                        </h5>
-                                                        <h6>
-                                                            $<?php echo $item["price"] ?>
-                                                        </h6>
+                                        <div class="col-sm-6 col-md-4 col-lg-4">
+                                            <div class="box" style="height:99%">
+                                                <div class="option_container">
+                                                    <div class="options">
+                                                        <a href="/card-detail.php?id=<?php echo $item["id"]; ?>"
+                                                            class="option1">
+                                                            More info
+                                                        </a>
                                                     </div>
                                                 </div>
+                                                <div class="img-box">
+                                                    <img src="<?php echo $item["thumbnail_url"] ?>" alt="">
+                                                </div>
+                                                <div class="detail-box">
+                                                    <h5>
+                                                        <?php echo $item["name"] ?>
+                                                    </h5>
+                                                    <h6>
+                                                        $<?php echo $item["price"] ?>
+                                                    </h6>
+                                                </div>
                                             </div>
+                                        </div>
                                         <?php endforeach ?>
                                     </div>
                                 </div>
@@ -169,6 +169,36 @@ $hot_items = hot_items();
             </div>
         </main>
         <!-- end main content -->
+        <!-- arrival section -->
+        <section class="arrival_section">
+            <div class="container">
+                <div class="box">
+                    <div class="arrival_bg_box">
+                        <img src="images/arrival-bg.jpg" alt="">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 ml-auto">
+                            <div class="heading_container remove_line_bt">
+                                <h2>
+                                    #NewArrivals
+                                </h2>
+                            </div>
+                            <p style="margin-top: 20px;margin-bottom: 30px;">
+                                Vitae fugiat laboriosam officia perferendis provident aliquid voluptatibus dolorem,
+                                fugit ullam sit earum id eaque nisi hic? Tenetur commodi, nisi rem vel, ea eaque ab
+                                ipsa, autem similique ex unde!
+                            </p>
+                            <div class="btn-box">
+                                <a href="/collection.php" class="btn1">
+                                    Shop Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end arrival section -->
         <!-- why section -->
         <section class="why_section layout_padding">
             <div class="container">
@@ -429,36 +459,7 @@ $hot_items = hot_items();
             </div>
         </section>
         <!-- end why section -->
-        <!-- arrival section -->
-        <section class="arrival_section">
-            <div class="container">
-                <div class="box">
-                    <div class="arrival_bg_box">
-                        <img src="images/arrival-bg.png" alt="">
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 ml-auto">
-                            <div class="heading_container remove_line_bt">
-                                <h2>
-                                    #NewArrivals
-                                </h2>
-                            </div>
-                            <p style="margin-top: 20px;margin-bottom: 30px;">
-                                Vitae fugiat laboriosam officia perferendis provident aliquid voluptatibus dolorem,
-                                fugit ullam sit earum id eaque nisi hic? Tenetur commodi, nisi rem vel, ea eaque ab
-                                ipsa, autem similique ex unde!
-                            </p>
-                            <div class="btn-box">
-                                <a href="/collections.php" class="btn1">
-                                    Shop Now
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- end arrival section -->
+
         <!-- subscribe section -->
         <section class="subscribe_section">
             <div class="container-fuild">

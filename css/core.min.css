@@ -4817,11 +4817,6 @@ fieldset:disabled .btn {
     box-shadow: inset 0 calc(-1*var(--mdb-accordion-border-width)) 0 var(--mdb-accordion-border-color)
 }
 
-.accordion-button:not(.collapsed)::after {
-    background-image: var(--mdb-accordion-btn-active-icon);
-    transform: var(--mdb-accordion-btn-icon-transform)
-}
-
 .accordion-button::after {
     flex-shrink: 0;
     width: var(--mdb-accordion-btn-icon-width);
