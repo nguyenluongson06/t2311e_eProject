@@ -130,7 +130,7 @@ require_once ("database/db.php");
                                                                 </p>
                                                             </div>
                                                             <div class="content-image">
-                                                                <img src="../images/about-us6.jpg" alt="Welcome Image">
+                                                                <img src="../images/about-us6.jpg" alt="Our Story Image">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -257,6 +257,8 @@ require_once ("database/db.php");
                                                                         We are committed to providing high-quality greeting cards that stand 
                                                                         out in design and durability. Each card is crafted with attention to detail 
                                                                         to ensure it is both beautiful and long-lasting.
+                                                                    </p>
+                                                                    <p class="lead fs-4 text-dark opacity-75 mb-4 mb-xxl-5 text-center">
                                                                         <strong>
                                                                             Diverse Selection:
                                                                         </strong>
