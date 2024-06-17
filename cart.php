@@ -156,10 +156,10 @@ $cards = get_cart();
                     <div class="col-md-4">
                         <div class="card mb-4">
                             <div class="card-body">
-                                <button type="submit" data-mdb-button-init data-mdb-ripple-init
-                                    class="btn btn-primary btn-lg btn-block">
+                                <a href="/checkout.php" class="btn btn-primary btn-lg btn-block fw-bold"
+                                    style="background-color: #f7444e !important;">
                                     Go to checkout
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
