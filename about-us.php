@@ -1,4 +1,4 @@
-<div?php
+<?php
 require_once ("database/db.php");
 ?>
 <!DOCTYPE html>
@@ -34,6 +34,57 @@ require_once ("database/db.php");
         list-style-type: none;
         padding: 0;
         margin: 0;
+        }
+        .content-with-image {
+            display: flex;
+            align-items: stretch;
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .content-text {
+            flex: 1;
+            margin-right: 20px;
+            padding: 20px;
+            border-radius: 4px;
+        }
+
+        .content-image {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            padding: 5px;
+        }
+
+        /* Responsive design for mobile */
+        @media (max-width: 768px) {
+            .content-with-image {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .content-text {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .content-image {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -73,8 +124,8 @@ require_once ("database/db.php");
                                             <div class="card-body p-0">
                                                 <div class="row gy-3 gy-md-4 gy-lg-0">
                                                     <div class="row align-items-lg-center justify-content-center h-100">
-                                                        <div class="col-11 col-xl-10">
-                                                            <div class="contact-info-wrapper py-4 py-xl-5">
+                                                        <div class="content-with-image">
+                                                            <div class="content-text">
                                                                 <p class="lead fs-4 text-dark opacity-75 mb-4 mb-xxl-5">
                                                                     At Card Treasure, we believe that every occasion deserves to be celebrated 
                                                                     with a personal touch. That's why we've dedicated ourselves to providing a 
@@ -83,6 +134,9 @@ require_once ("database/db.php");
                                                                     achievements, or simply wanting to say "thank you," we have the perfect card to 
                                                                     convey your heartfelt message.
                                                                 </p>
+                                                            </div>
+                                                            <div class="content-image">
+                                                                <img src="../images/about-us6.jpg" alt="Welcome Image">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -108,8 +162,8 @@ require_once ("database/db.php");
                                             <div class="card-body p-0">
                                                 <div class="row gy-3 gy-md-4 gy-lg-0">
                                                     <div class="row align-items-lg-center justify-content-center h-100">
-                                                        <div class="col-11 col-xl-10">
-                                                            <div class="contact-info-wrapper py-4 py-xl-5">
+                                                        <div class="content-with-image">
+                                                            <div class="content-text">
                                                                 <p class="lead fs-4 text-dark opacity-75 mb-4 mb-xxl-5 text-center">
                                                                     Card Treasure was founded with a passion for helping people express their 
                                                                     emotions and connect with others in meaningful ways. We understand that in 
@@ -117,6 +171,9 @@ require_once ("database/db.php");
                                                                     and memorable touch to any occasion. Our mission is to bring joy and warmth to every 
                                                                     celebration with our diverse and beautifully crafted cards.
                                                                 </p>
+                                                            </div>
+                                                            <div class="content-image">
+                                                                <img src="../images/about-us7.jpg" alt="Our Story Image">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -142,8 +199,8 @@ require_once ("database/db.php");
                                             <div class="card-body p-0">
                                                 <div class="row gy-3 gy-md-4 gy-lg-0">
                                                     <div class="row align-items-lg-center justify-content-center h-100">
-                                                        <div class="col-11 col-xl-10">
-                                                            <div class="contact-info-wrapper py-4 py-xl-5">
+                                                        <div class="content-with-image">
+                                                            <div class="content-text">
                                                                 <p class="lead fs-4 text-dark opacity-75 mb-4 mb-xxl-5 text-center">
                                                                     At Card Treasure, we offer a comprehensive selection of greeting 
                                                                     cards for all occasions, including:
@@ -157,7 +214,7 @@ require_once ("database/db.php");
                                                                     <li class="list-group-item"><p class="lead fs-4 text-dark opacity-75 mb-4 mb-xxl-5 text-center">
                                                                         <strong>
                                                                             Anniversary
-                                                                        <strong>
+                                                                        </strong>
                                                                     </p></li>
                                                                     <li class="list-group-item"><p class="lead fs-4 text-dark opacity-75 mb-4 mb-xxl-5 text-center">
                                                                         <strong>
@@ -169,6 +226,9 @@ require_once ("database/db.php");
                                                                     Our cards are carefully designed and curated to ensure that you can find exactly what you need, 
                                                                     whether you prefer something classic, contemporary, humorous, or heartfelt.
                                                                 </p>
+                                                            </div>
+                                                            <div class="content-image">
+                                                                <img src="../images/about-us9.jpg" alt="What We Offer Image">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -194,8 +254,8 @@ require_once ("database/db.php");
                                                 <div class="card-body p-0">
                                                     <div class="row gy-3 gy-md-4 gy-lg-0">
                                                         <div class="row align-items-lg-center justify-content-center h-100">
-                                                            <div class="col-11 col-xl-10">
-                                                                <div class="contact-info-wrapper py-4 py-xl-5">
+                                                            <div class="content-with-image">
+                                                                <div class="content-text">
                                                                     <p class="lead fs-4 text-dark opacity-75 mb-4 mb-xxl-5 text-center">
                                                                         <strong>
                                                                             Quality and Craftsmanship:
@@ -203,8 +263,6 @@ require_once ("database/db.php");
                                                                         We are committed to providing high-quality greeting cards that stand 
                                                                         out in design and durability. Each card is crafted with attention to detail 
                                                                         to ensure it is both beautiful and long-lasting.
-                                                                    </p>
-                                                                    <p class="lead fs-4 text-dark opacity-75 mb-4 mb-xxl-5 text-center">
                                                                         <strong>
                                                                             Diverse Selection:
                                                                         </strong>
@@ -212,30 +270,9 @@ require_once ("database/db.php");
                                                                         Our collection includes designs from traditional to modern, 
                                                                         ensuring that everyone can find something they love.
                                                                     </p>
-                                                                    <p class="lead fs-4 text-dark opacity-75 mb-4 mb-xxl-5 text-center">
-                                                                        <strong>
-                                                                            Customer Satisfaction:
-                                                                        </strong>
-                                                                        Your satisfaction is our top priority. 
-                                                                        We strive to provide excellent customer service and ensure a 
-                                                                        seamless shopping experience, both online and in-store.
-                                                                    </p>
-                                                                    <p class="lead fs-4 text-dark opacity-75 mb-4 mb-xxl-5 text-center">
-                                                                        <strong>
-                                                                            Eco-Friendly Practices:
-                                                                        </strong>
-                                                                        We are dedicated to sustainability and use environmentally 
-                                                                        friendly materials whenever possible. Our goal is to minimize our 
-                                                                        impact on the environment while providing you with beautiful products.
-                                                                    </p>
-                                                                    <p class="lead fs-4 text-dark opacity-75 mb-4 mb-xxl-5 text-center">
-                                                                        <strong>
-                                                                            Building Connections:
-                                                                        </strong>
-                                                                        At Card Treasure, we understand the importance of connections and relationships. 
-                                                                        Our cards are designed to help you express your feelings and make meaningful 
-                                                                        connections with those who matter most.
-                                                                    </p>
+                                                                </div>
+                                                                <div class="content-image">
+                                                                    <img src="../images/about-us5.jpg" alt="Our Objectives Image">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -249,7 +286,7 @@ require_once ("database/db.php");
                         </div>
                     </div>
                 </div>
-            </div>
+            </>
         </section>
     </main>
     <?php include_once ("components/footer.php"); ?>
