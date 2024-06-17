@@ -37,53 +37,47 @@ require_once ("database/db.php");
         }
         .content-with-image {
             display: flex;
-            align-items: stretch;
-            margin-bottom: 20px;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            background-color: #f9f9f9;
-            max-width: 1200px;
-            margin: 0 auto;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            padding-right: 0; 
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .content-text {
-            flex: 1;
-            margin-right: 20px;
-            padding: 20px;
-            border-radius: 4px;
+            flex: 1 1 60%;
+            padding: 1rem;
+            box-sizing: border-box;
         }
 
         .content-image {
-            flex: 1;
+            flex: 1 1 40%; 
+            padding: 1rem; 
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
         }
 
         .content-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 4px;
-            border: 1px solid #ddd;
-            padding: 5px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
         }
 
-        /* Responsive design for mobile */
         @media (max-width: 768px) {
             .content-with-image {
                 flex-direction: column;
-                align-items: center;
             }
-
-            .content-text {
-                margin-right: 0;
-                margin-bottom: 20px;
+            
+            .content-text, .content-image {
+                flex-basis: 100%;
             }
-
+            
             .content-image {
-                width: 100%;
+                margin-bottom: 1rem;
             }
         }
     </style>
