@@ -10,78 +10,78 @@ require_once ("database/db.php");
         <title>About Us</title>
         <?php include_once ("components/style.php"); ?>
         <style>
-            .centered-content {
-                display: flex;
-                justify-content: center;
-                align-items: center;
+        .centered-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .content-frame {
+            max-width: 800px;
+            margin: 20px 0;
+        }
+
+        .content-frame h1,
+        .content-frame h2 {
+            text-align: center;
+        }
+
+        .horizontal-list {
+            display: grid;
+            grid-auto-flow: column;
+            gap: 15px;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .content-with-image {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            padding-right: 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .content-text {
+            flex: 1 1 60%;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+
+        .content-image {
+            flex: 1 1 40%;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        .content-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .content-with-image {
                 flex-direction: column;
             }
 
-            .content-frame {
-                max-width: 800px;
-                margin: 20px 0;
-            }
-
-            .content-frame h1,
-            .content-frame h2 {
-                text-align: center;
-            }
-
-            .horizontal-list {
-                display: grid;
-                grid-auto-flow: column;
-                gap: 15px;
-                list-style-type: none;
-                padding: 0;
-                margin: 0;
-            }
-
-            .content-with-image {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-                margin-bottom: 2rem;
-                padding-right: 0;
-                width: 100%;
-                box-sizing: border-box;
-            }
-
-            .content-text {
-                flex: 1 1 60%;
-                padding: 1rem;
-                box-sizing: border-box;
+            .content-text,
+            .content-image {
+                flex-basis: 100%;
             }
 
             .content-image {
-                flex: 1 1 40%;
-                padding: 1rem;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                box-sizing: border-box;
+                margin-bottom: 1rem;
             }
-
-            .content-image img {
-                max-width: 100%;
-                height: auto;
-                border-radius: 8px;
-            }
-
-            @media (max-width: 768px) {
-                .content-with-image {
-                    flex-direction: column;
-                }
-
-                .content-text,
-                .content-image {
-                    flex-basis: 100%;
-                }
-
-                .content-image {
-                    margin-bottom: 1rem;
-                }
-            }
+        }
         </style>
     </head>
 
@@ -125,7 +125,7 @@ require_once ("database/db.php");
                                                                 <div class="content-text">
                                                                     <p
                                                                         class="lead fs-4 text-dark opacity-75 mb-4 mb-xxl-5">
-                                                                        At Card Treasure, we believe that every occasion
+                                                                        At Red Card Ltd., we believe that every occasion
                                                                         deserves to be celebrated
                                                                         with a personal touch. That's why we've
                                                                         dedicated ourselves to providing a
@@ -171,7 +171,7 @@ require_once ("database/db.php");
                                                                 <div class="content-text">
                                                                     <p
                                                                         class="lead fs-4 text-dark opacity-75 mb-4 mb-xxl-5 text-center">
-                                                                        Card Treasure was founded with a passion for
+                                                                        Red Card Ltd. was founded with a passion for
                                                                         helping people express their
                                                                         emotions and connect with others in meaningful
                                                                         ways. We understand that in
@@ -216,7 +216,7 @@ require_once ("database/db.php");
                                                                 <div class="content-text">
                                                                     <p
                                                                         class="lead fs-4 text-dark opacity-75 mb-4 mb-xxl-5 text-center">
-                                                                        At Card Treasure, we offer a comprehensive
+                                                                        At Red Card Ltd., we offer a comprehensive
                                                                         selection of greeting
                                                                         cards for all occasions, including:
                                                                     </p>
