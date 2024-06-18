@@ -13,8 +13,8 @@ $gift_wrap = isset($_POST["giftWrap"]) ? 1 : 0;
 $customMessage = isset($_POST['customMessage']) ? 1 : 0;
 $messageContent = isset($_POST['messageContent']) ? $_POST['messageContent'] : "";
 
-if (isset($cart[$id]) & $cart[$id]["qty"] > 0) {
-    $cart[$id]["qty"] = $cart[$id]["qty"] + $qty;
+if (isset($cart[$id]) & $cart[$id] > 0) {
+    $cart[$id] = $cart[$id] + $qty;
 } else {
     $cart[$id] = $qty;
     $gift_wrap_status[$id] = $gift_wrap;

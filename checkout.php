@@ -52,7 +52,7 @@ foreach ($cards as $item) {
                                         <p class="mb-0">First name</p>
                                         <div class="form-outline">
                                             <input type="text" id="firstName" name="firstName" placeholder="First name"
-                                                class="form-control border">
+                                                required class="form-control border">
                                         </div>
                                     </div>
 
@@ -60,14 +60,14 @@ foreach ($cards as $item) {
                                         <p class="mb-0">Last name</p>
                                         <div class="form-outline">
                                             <input type="text" id="lastName" name="lastName" placeholder="Last name"
-                                                class="form-control border">
+                                                required class="form-control border">
                                         </div>
                                     </div>
 
                                     <div class="col-6 mb-3">
                                         <p class="mb-0">Phone</p>
                                         <div class="form-outline">
-                                            <input type="tel" id="tel" value="+84 " name="tel"
+                                            <input type="tel" id="tel" value="+84 " name="tel" required
                                                 class="form-control border">
                                         </div>
                                     </div>
@@ -76,7 +76,7 @@ foreach ($cards as $item) {
                                         <p class="mb-0">Email</p>
                                         <div class="form-outline">
                                             <input type="email" id="email" name="email" placeholder="example@gmail.com"
-                                                class="form-control border">
+                                                required class="form-control border">
                                         </div>
                                     </div>
                                 </div>
@@ -132,14 +132,14 @@ foreach ($cards as $item) {
                                         <p class="mb-0">Address</p>
                                         <div class="form-outline">
                                             <input type="text" id="address" name="address" placeholder="Address"
-                                                class="form-control border">
+                                                required class="form-control border">
                                         </div>
                                     </div>
 
                                     <div class="col-sm-4 mb-3">
                                         <p class="mb-0">City</p>
                                         <div class="form-outline">
-                                            <input type="text" id="city" name="city" placeholder="Type here"
+                                            <input type="text" id="city" name="city" placeholder="Type here" required
                                                 class="form-control border">
                                         </div>
                                     </div>
@@ -147,7 +147,7 @@ foreach ($cards as $item) {
                                     <div class="col-sm-6 col-6 mb-3">
                                         <p class="mb-0">Postal code</p>
                                         <div class="form-outline">
-                                            <input type="text" id="postalCode" name="postalCode"
+                                            <input type="text" id="postalCode" name="postalCode" required
                                                 class="form-control border">
                                         </div>
                                     </div>
@@ -155,7 +155,8 @@ foreach ($cards as $item) {
                                     <div class="col-sm-6 col-6 mb-3">
                                         <p class="mb-0">Zipcode</p>
                                         <div class="form-outline">
-                                            <input type="text" id="zipCode" name="zipCode" class="form-control border">
+                                            <input type="text" id="zipCode" name="zipCode" class="form-control border"
+                                                required>
                                         </div>
                                     </div>
                                 </div>
@@ -199,23 +200,23 @@ foreach ($cards as $item) {
                             <hr>
                             <h6 class="text-dark my-4">Items in cart</h6>
                             <?php foreach ($cards as $item): ?>
-                            <div class="d-flex align-items-center mb-4">
-                                <div class="me-3 position-relative">
-                                    <span class="position-absolute top-0 end-0 translate-middle badge rounded-pill"
-                                        style="background-color: #f7444e !important; color: white">
-                                        <?php echo $cart[$item["id"]] ?>
-                                    </span>
-                                    <img src="<?php echo $item["thumbnail_url"] ?>"
-                                        style="height: 96px !important; width: 96px !important;"
-                                        class="img-sm rounded border">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="me-3 position-relative">
+                                        <span class="position-absolute top-0 end-0 translate-middle badge rounded-pill"
+                                            style="background-color: #f7444e !important; color: white">
+                                            <?php echo $cart[$item["id"]] ?>
+                                        </span>
+                                        <img src="<?php echo $item["thumbnail_url"] ?>"
+                                            style="height: 96px !important; width: 96px !important;"
+                                            class="img-sm rounded border">
+                                    </div>
+                                    <div class="">
+                                        <a href="/card-detail.php?id=<?php echo $item["id"] ?>" class="nav-link">
+                                            <?php echo $item["name"] ?>
+                                        </a>
+                                        <div class="price text-muted">Total: $<?php echo $total[$item["id"]] ?></div>
+                                    </div>
                                 </div>
-                                <div class="">
-                                    <a href="/card-detail.php?id=<?php echo $item["id"] ?>" class="nav-link">
-                                        <?php echo $item["name"] ?>
-                                    </a>
-                                    <div class="price text-muted">Total: $<?php echo $total[$item["id"]] ?></div>
-                                </div>
-                            </div>
                             <?php endforeach ?>
                         </div>
                     </div>
@@ -223,19 +224,19 @@ foreach ($cards as $item) {
             </div>
         </main>
         <script>
-        $(document).ready(function() {
-            $('input[name="shipping_method"]').change(function() {
-                var method = $(this).val();
-                switch (method) {
-                    case "EXPRESS":
-                        $('#shippingPrice').text('$20');
-                    case "POST":
-                        $('#shippingPrice').text('$10')
-                    case "SELF":
-                        $('#shippingPrice').text('$0');
-                }
+            $(document).ready(function () {
+                $('input[name="shipping_method"]').change(function () {
+                    var method = $(this).val();
+                    switch (method) {
+                        case "EXPRESS":
+                            $('#shippingPrice').text('$20');
+                        case "POST":
+                            $('#shippingPrice').text('$10')
+                        case "SELF":
+                            $('#shippingPrice').text('$0');
+                    }
+                });
             });
-        });
         </script>
     </body>
 

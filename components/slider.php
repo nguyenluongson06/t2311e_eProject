@@ -16,11 +16,6 @@
                                     <br>
                                     On Everything
                                 </h1>
-                                <p>
-                                    Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic?
-                                    Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel
-                                    architecto veritatis delectus repellat modi impedit sequi.
-                                </p>
                                 <div class="btn-box">
                                     <a href="/collection.php" class="btn1">
                                         Shop Now
@@ -43,11 +38,6 @@
                                     <br>
                                     On Everything
                                 </h1>
-                                <p>
-                                    Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic?
-                                    Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel
-                                    architecto veritatis delectus repellat modi impedit sequi.
-                                </p>
                                 <div class="btn-box">
                                     <a href="/collection.php" class="btn1">
                                         Shop Now
@@ -70,11 +60,6 @@
                                     <br>
                                     On Everything
                                 </h1>
-                                <p>
-                                    Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic?
-                                    Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel
-                                    architecto veritatis delectus repellat modi impedit sequi.
-                                </p>
                                 <div class="btn-box">
                                     <a href="/collection.php" class="btn1">
                                         Shop Now
