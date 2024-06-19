@@ -9,6 +9,7 @@ $manufacturer_id = $card["category_id"];
 $manufacturer = get_manufacturer_detail($manufacturer_id);
 $category = get_category_detail($manufacturer_id);
 $related_cards = get_related_cards($card_id);
+$previous_url = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '#';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,20 +20,20 @@ $related_cards = get_related_cards($card_id);
         <title><?php echo $card["name"]; ?></title>
         <?php include_once ("components/style.php"); ?>
         <script>
-        $(document).ready(function() {
-            $('#customMessageCheckbox').change(function() {
-                if ($(this).is(':checked')) {
-                    $('#customMessageText').show();
-                } else {
-                    $('#customMessageText').hide();
-                }
+            $(document).ready(function () {
+                $('#customMessageCheckbox').change(function () {
+                    if ($(this).is(':checked')) {
+                        $('#customMessageText').show();
+                    } else {
+                        $('#customMessageText').hide();
+                    }
+                });
             });
-        });
         </script>
         <style>
-        #customMessageText {
-            display: none;
-        }
+            #customMessageText {
+                display: none;
+            }
         </style>
     </head>
 
@@ -55,8 +56,44 @@ $related_cards = get_related_cards($card_id);
         <main class="main">
             <div class="container">
                 <div class="row gx-4 gx-lg-5 align-items-center">
-                    <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0"
-                            src="<?php echo $card["thumbnail_url"] ?>" alt="..."></div>
+                    <aside class="col-lg-6">
+                        <div class="border rounded-4 mb-3 d-flex justify-content-center">
+                            <a data-fslightbox="mygalley" class="rounded-4" target="_blank" data-type="image"
+                                href="<?php echo $card["thumbnail_url"] ?>">
+                                <img style="max-width: 100%; max-height: 100vh; margin: auto;" class="rounded-4 fit"
+                                    src="<?php echo $card["thumbnail_url"] ?>">
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-center mb-3">
+                            <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank"
+                                data-type="image" href="<?php echo $card["thumbnail_url"] ?>">
+                                <img width="60" height="60" class="rounded-2"
+                                    src="<?php echo $card["thumbnail_url"] ?>">
+                            </a>
+                            <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank"
+                                data-type="image" href="<?php echo $card["thumbnail_url"] ?>">
+                                <img width="60" height="60" class="rounded-2"
+                                    src="<?php echo $card["thumbnail_url"] ?>">
+                            </a>
+                            <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank"
+                                data-type="image" href="<?php echo $card["thumbnail_url"] ?>">
+                                <img width="60" height="60" class="rounded-2"
+                                    src="<?php echo $card["thumbnail_url"] ?>">
+                            </a>
+                            <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank"
+                                data-type="image" href="<?php echo $card["thumbnail_url"] ?>">
+                                <img width="60" height="60" class="rounded-2"
+                                    src="<?php echo $card["thumbnail_url"] ?>">
+                            </a>
+                            <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank"
+                                data-type="image" href="<?php echo $card["thumbnail_url"] ?>">
+                                <img width="60" height="60" class="rounded-2"
+                                    src="<?php echo $card["thumbnail_url"] ?>">
+                            </a>
+                        </div>
+                        <!-- thumbs-wrap.// -->
+                        <!-- gallery-wrap .end// -->
+                    </aside>
                     <div class="col-md-6">
                         <div class="small mb-1">Product ID: <?php echo $card_id ?></div>
                         <h1 class="display-5 fw-bolder"><?php echo $card["name"] ?></h1>
@@ -106,28 +143,28 @@ $related_cards = get_related_cards($card_id);
                 <h2 class="fw-bolder mb-4">Related products</h2>
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                     <?php foreach ($related_cards as $item): ?>
-                    <div class="col-sm-6 col-md-4 col-lg-4" style="min-height: 98%;">
-                        <div class="box" style="min-height: 98%;">
-                            <div class="option_container">
-                                <div class="options">
-                                    <a href="/card-detail.php?id=<?php echo $item["id"]; ?>" class="option1">
-                                        More info
-                                    </a>
+                        <div class="col-sm-6 col-md-4 col-lg-4" style="min-height: 98%;">
+                            <div class="box" style="min-height: 98%;">
+                                <div class="option_container">
+                                    <div class="options">
+                                        <a href="/card-detail.php?id=<?php echo $item["id"]; ?>" class="option1">
+                                            More info
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="img-box">
+                                    <img src="<?php echo $item["thumbnail_url"] ?>" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h5>
+                                        <?php echo $item["name"] ?>
+                                    </h5>
+                                    <h6>
+                                        $<?php echo $item["price"] ?>
+                                    </h6>
                                 </div>
                             </div>
-                            <div class="img-box">
-                                <img src="<?php echo $item["thumbnail_url"] ?>" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h5>
-                                    <?php echo $item["name"] ?>
-                                </h5>
-                                <h6>
-                                    $<?php echo $item["price"] ?>
-                                </h6>
-                            </div>
                         </div>
-                    </div>
                     <?php endforeach ?>
                 </div>
             </div>
