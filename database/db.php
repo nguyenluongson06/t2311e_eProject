@@ -138,6 +138,26 @@ function get_cart()
     return [];
 }
 
+function get_last_cart_info()
+{
+    $cart = isset($_SESSION["last_order_info"]["cart"]) ? $_SESSION["last_order_info"]["cart"] : [];
+    if (count($cart) > 0) {
+        $card_ids = [];
+        foreach ($cart as $id => $qty) {
+            $card_ids[] = $id;
+        }
+        $cart_ids = implode(",", $card_ids);
+        $sql = "select * from cards where id in ($cart_ids)";
+        $result = query($sql);
+        $list = [];
+        while ($row = $result->fetch_assoc()) {
+            $list[] = $row;
+        }
+        return $list;
+    }
+    return [];
+}
+
 function newest_cards()
 {
     $sql = "select * from cards order by id desc limit 9";

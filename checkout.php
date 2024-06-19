@@ -180,7 +180,7 @@ foreach ($cards as $item) {
                         <div class="ms-lg-4 mt-4 mt-lg-0" style="max-width: 320px;">
                             <h6 class="mb-3">Summary</h6>
                             <div class="d-flex justify-content-between">
-                                <p class="mb-2">Total price:</p>
+                                <p class="mb-2">Total:</p>
                                 <p class="mb-2">$<?php echo $grand_total ?></p>
                             </div>
                             <div class="d-flex justify-content-between">
