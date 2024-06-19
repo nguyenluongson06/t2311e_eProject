@@ -4,15 +4,30 @@ $categories = get_categories();
 $manufacturers = get_manufacturers();
 $current_category = isset($_GET["category"]) ? $_GET["category"] : 0;
 $current_manufacturer = isset($_GET["manufacturer"]) ? $_GET["manufacturer"] : 0;
-
+$current_page = isset($_GET["page"]) ? $_GET["page"] : 1;
+$redirect_base = "/collection.php";
 //change card list according to category or manufacturer filter
 if ($current_category != 0) {
     $cards = get_card_in_category($current_category);
+    $redirect_base = $redirect_base . "?category=$current_category" . "&";
 } elseif ($current_manufacturer != 0) {
     $cards = get_card_in_manufacturer($current_manufacturer);
+    $redirect_base = $redirect_base . "?manufacturer=$current_manufacturer" . "&";
 } else {
     $cards = get_cards();
+    $redirect_base = $redirect_base . "?";
 }
+
+$cards_per_page = 8;
+$total_cards = count($cards);
+$total_pages = ceil($total_cards / $cards_per_page);
+if ($current_page < 1) {
+    $current_page = 1;
+} elseif ($current_page > $total_pages) {
+    $current_page = $total_pages;
+}
+$offset = ($current_page - 1) * $cards_per_page;
+$current_page_cards = array_slice($cards, $offset, $cards_per_page);
 ?>
 
 <!DOCTYPE html>
@@ -115,7 +130,7 @@ if ($current_category != 0) {
                             <strong class="d-block py-2"><?php echo count($cards) ?> items found</strong>
                         </header>
 
-                        <?php foreach ($cards as $item): ?>
+                        <?php foreach ($current_page_cards as $item): ?>
                         <div class="row justify-content-center mb-3">
                             <div class="col-md-12">
                                 <div class="card shadow-0 border rounded-3">
@@ -176,6 +191,34 @@ if ($current_category != 0) {
                             </div>
                         </div>
                         <?php endforeach ?>
+                        <ul class="pagination justify-content-center">
+                            <!-- Previous Button -->
+                            <li class="page-item <?php echo $current_page == 1 ? 'disabled' : ''; ?>">
+                                <a class="page-link mx-1"
+                                    href="<?php echo $current_page > 1 ? $redirect_base . 'page=' . ($current_page - 1) : '#'; ?>"
+                                    aria-label="Previous">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </a>
+                            </li>
+
+                            <!-- Page Numbers -->
+                            <?php for ($page = 1; $page <= $total_pages; $page++): ?>
+                            <li class="page-item <?php echo $page == $current_page ? 'active' : ''; ?>">
+                                <a class="page-link mx-1"
+                                    href="<?php echo $redirect_base . 'page=' . $page ?>"><?php echo $page; ?></a>
+                            </li>
+                            <?php endfor; ?>
+
+                            <!-- Next Button -->
+                            <li class="page-item <?php echo $current_page == $total_pages ? 'disabled' : ''; ?>">
+                                <a class="page-link mx-1"
+                                    href="<?php echo $current_page < $total_pages ? $redirect_base . 'page=' . ($current_page + 1) : '#'; ?>"
+                                    aria-label="Next">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+
                     </div>
                 </div>
             </div>

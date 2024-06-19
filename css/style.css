@@ -1180,9 +1180,18 @@ a.nav-filter:not(.active):hover {
 li.align-items-center {
   cursor: pointer;
 }
-footer{
+
+footer {
   color: black;
 }
-footer h3{
+
+footer h3 {
   color: black;
+}
+
+.page-item.active .page-link {
+  z-index: 1;
+  color: #fff;
+  background-color: #f7444e !important;
+  border-color: #f7444e !important;
 }
