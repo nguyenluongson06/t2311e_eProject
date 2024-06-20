@@ -24,4 +24,4 @@ if (isset($cart[$id]) & $cart[$id] > 0) {
 $_SESSION["cart"] = $cart;
 $_SESSION["gift_wrap"] = $gift_wrap_status;
 $_SESSION["message"] = $message;
-header('Location: ' . $_SERVER['HTTP_REFERER']);
+header('Location: cart.php');
